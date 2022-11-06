@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto Mono',
+		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 0;
+	color: #333;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+/* // GENERAL CSS */
+.container {
+	max-width: 950px;
+	margin: 0 auto;
+	padding: 0 15px;
+	margin-bottom: 50px;
+}
+
+.margin-top-lg {
+	margin-top: 100px;
+}
+
+/* // APP COMPONENT */
+
+.app-heading {
+	margin-top: 50px;
+	text-align: center;
+}
+
+/* TODOLIST COMPONENT */
+.todos {
+	list-style: none;
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+}
+
+.no-todos-feedback {
+	color: #ff6b6b;
+	text-align: center;
+}
+
+/* TODO COMPONENT */
+
+.todo {
+	background-color: #f1f3f5;
+	background-color: #f08c00;
+	background-color: #f59f00;
+	padding: 10px 20px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.075);
+	transition: all 0.3s;
+	cursor: pointer;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	/* text-align: center; */
+}
+.todo:hover {
+	transform: scale(102%);
+}
+.todo.todo--completed {
+	background-color: #fff3bf;
+	text-decoration: line-through;
+	box-shadow: 5px 5px 5px #fff;
+}
+
+.todo.todo--completed:hover {
+	transform: scale(100%);
+}
+.todo-title {
+	margin-bottom: 16px;
+}
+
+.todo__button--remove {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	border: none;
+	padding: 5px;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	background-color: #fa5252;
+	width: 100px;
+	transition: 0.3s;
+}
+.todo__button--remove:hover {
+	background-color: #ff6b6b;
+}
+
+/* // ADD TODO COMPONENT */
+
+.add-todo-form {
+	text-align: center;
+	margin-top: 50px;
+}
+.input-group {
+	text-align: center;
+}
+.add-todo-form input,
+textarea,
+button {
+	width: 50%;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: transparent;
+	border: 1px solid #dee2e6;
+	/* background-color: #ced4da; */
+	margin-top: 16px;
+	/* display: block; */
+}
+
+.add-todo-form button {
+	color: #2b8a3e;
+	background-color: #ebfbee;
+	cursor: pointer;
+	border: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+.add-todo-form button:hover {
+	background-color: #d3f9d8d7;
+}
